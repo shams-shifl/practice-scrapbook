@@ -16,6 +16,7 @@ body{
     grid-template: 1fr / 1fr 1fr 1fr 1fr;
     gap:0px;
     width: 88%;
+    max-width: 1368px;
 }
 
 .title{
