@@ -152,7 +152,7 @@ body{
 .card-3{
     border-radius: 20px;
     border: 1px solid rgba(94, 98, 101, 0.3);
-    background: linear-gradient(180deg, #24292D 35%, rgba(36, 41, 45, 0.10) 100%), url("./cloud.jpg");
+    background: linear-gradient(180deg, #24292D 35%, rgba(36, 41, 45, 0.10) 100%), url("./assets/cloud.jpg");
     background-clip: padding-box;
 }
 
