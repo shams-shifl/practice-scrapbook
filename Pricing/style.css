@@ -1,0 +1,174 @@
+body{
+    background-color: #1B1F22;
+    color: #FDFEFF;
+    font-family: Inter, sans-serif;
+}
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    gap:0px;
+    width: 88%;
+}
+
+.title{
+    grid-column: span 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0;
+}
+
+.section-badge{
+    text-transform: uppercase;
+    font-family: "SF Mono", Courier, monospace;
+    font-size: 14px;
+    line-height: 20px;
+    color: #A8ADF7;
+    padding: 2px 8px;
+    border-left: 1px solid #A7ADD1;
+    background-image: linear-gradient(90deg, rgba(168, 173, 247, 0.16) 0%, rgba(168, 173, 247, 0.00) 100%);
+}
+
+.title h1{
+    font-size: 36px;
+    line-height: 120%;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    padding: 16px 0 16px 0;
+}
+
+.title h4{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    opacity: 80%;
+}
+
+.card{
+    border: 1px dashed rgba(94, 98, 101, 0.20);
+}
+
+.card .card-title{
+    padding: 20px;
+    border-bottom: 1px dashed rgba(94, 98, 101, 0.20);
+}
+
+.card .card-title h3{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.card .card-title p{
+    color: rgba(94, 98, 101, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.card .price{
+    font-size: 36px;
+    font-family: "SF Mono", Courier, monospace;
+    font-weight: 400;
+}
+
+.button-area{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    padding: 8px;
+    border: 1px solid rgba(94, 98, 101, 0.3);
+    border-radius: 10px;
+    display: flex;
+    color: #FDFEFF;
+    justify-content: center;
+    align-items: center;
+}
+
+.button svg{
+    fill: #FDFEFF;
+    padding-left: 6px;
+}
+
+.button-area a{
+    text-decoration: none;
+    width: 100%;
+}
+
+.feature-list{
+    padding: 0px 20px 20px 20px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #E3E5E6;
+}
+
+.feature-list ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feature-list ul li{
+    margin: 0;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.feature-list ul li p{
+    padding: 0px 12px;
+    margin: 0;
+}
+
+.card-1{
+    grid-column-start: 1;
+}
+
+.card-3{
+    border-radius: 20px;
+    border: 1px solid rgba(94, 98, 101, 0.3);
+    background: linear-gradient(180deg, #24292D 35%, rgba(36, 41, 45, 0.10) 100%), url("./cloud.jpg");
+    background-clip: padding-box;
+}
+
+.card-3 .button{
+    background-color: #FDFEFF;
+    color: #1B1F22;
+    font-weight: 500;
+}
+
+.card-3 .button svg{
+    fill: #1B1F22;
+}
+
+.card-3 .card-title{
+    background-color: #24292D;
+}
+
+.card-3 .card-title{
+    border-radius: 20px 20px 0 0;
+}
