@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shams's Take on Border Animation</title>
+
+    <Style>
+        main {
+            display: flex;
+            background: #F9FAFB;
+            width: 100vw;
+            height:calc(100vh - 2rem);
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            color: #1b1b1b;
+            font-size: 16px;
+            line-height: 24px;;
+        }
+
+        p{
+            margin: 0;
+        }
+        
+        .main-container{
+            position: relative;
+            border-radius: 16px;
+            z-index: 20;
+            overflow: hidden;
+        }
+        
+        .contents{
+            border-radius: 16px;
+            padding: 12px 24px;
+            background: linear-gradient(#ffffff, #F3F4F7) padding-box transparent;
+            border: 2px solid transparent;
+            text-align: center;
+        }
+        
+        .background{
+            background: #E7E9EE;
+            z-index:-1;
+            position:absolute;
+            inset:0;
+            border-radius: 16px;
+        }
+        
+        .trail{
+            position:absolute;
+            background: radial-gradient(
+                            100% 100% at right,
+                            #0E9FDD80,
+                            transparent 50%
+                        );
+            width:100px;
+            aspect-ratio: 2/1;
+            offset-path: border-box;
+            offset-anchor: 100% 50%;
+            animation: journey var(--speed, 6s) infinite linear;
+        }
+        
+        @container(width > 600px){
+            .trail{
+                --speed: 12s;
+            }
+        }
+
+        @keyframes journey {
+            to {
+                offset-distance: 100%;
+            }
+        }
+    
+    </Style>
+</head>
+
+<body>
+    <main>
+        <section class="main-container">
+          <div class="background">
+            <div class="trail"></div>
+          </div>
+          <div class="contents">
+            <p>Button with Trail</p>
+          </div>
+        </section>
+    </main>
+</body>
+</html>

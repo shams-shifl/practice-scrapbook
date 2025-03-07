@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #eeeeee;
+            position: relative;
+        }
+
+        .card {
+            width: 560px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 16px;
+            height: 640px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 16px;
+            padding: 8px;
+            z-index: 20;
+            cursor: pointer;
+        }
+
+        .card-header {
+            padding: 16px 0;
+            border-bottom: 1px solid #eeeeee;
+            position: sticky;
+            top: 0;
+            background-color: #ffffff;
+        }
+
+        h2{
+            margin: 0px;
+        }
+
+        .card-body{
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        .card-footer{
+            padding: 16px 0;
+            background-color: #ffffff;
+            position: sticky;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card">
+            <div class="close-btn">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8545 5.53033C16.1474 5.23744 16.1474 4.76256 15.8545 4.46967C15.5617 4.17678 15.0868 4.17678 14.7939 4.46967L10.3242 8.93934L5.85455 4.46967C5.56166 4.17678 5.08678 4.17678 4.79389 4.46967C4.501 4.76256 4.501 5.23744 4.79389 5.53033L9.26356 10L4.79389 14.4697C4.501 14.7626 4.501 15.2374 4.79389 15.5303C5.08678 15.8232 5.56166 15.8232 5.85455 15.5303L10.3242 11.0607L14.7939 15.5303C15.0868 15.8232 15.5617 15.8232 15.8545 15.5303C16.1474 15.2374 16.1474 14.7626 15.8545 14.4697L11.3849 10L15.8545 5.53033Z" fill="#253041"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="card-header">
+                <h2>Card Title</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat libero quas beatae iusto assumenda ut saepe molestiae debitis, dolorum id. Deserunt harum quisquam sed illo neque esse, at deleniti culpa.</p>
+                <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*GRWj97FRXfaG7g1yUUNyaQ.jpeg" alt="" width="480px">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti impedit quo eveniet illo ratione blanditiis rerum officiis animi eum hic unde error numquam sequi, laboriosam aut repudiandae quibusdam soluta excepturi.</p>
+            </div>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 2025 Speakers!</title>
+
+    <style>
+        @property --_t {
+            syntax: "<length>";
+            inherits: false;
+            initial-value: 0; 
+        }
+        @property --_r {
+            syntax: "<angle>";
+            inherits: false;
+            initial-value: 0deg; 
+        }
+
+        section{
+            --d: 20s;  /* animation duration*/
+            --n: 9; /* number of speakers*/
+
+            font: 20px/1.6 "Source Code Pro", Inconsolata, Menlo, monospace;
+            color: rgb(34, 34, 34);
+            margin: 3em 1em;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            padding-left: 350px;
+            position: relative;
+        }
+
+        section::before{
+            content: "{";
+            font-size: 9em;
+            line-height: 1em;
+            color: #e3e2db;
+            margin: auto;
+        }
+
+        li{
+            transition: .3s;
+        }
+
+        a{
+            text-decoration: none;
+            border-bottom: 1px dotted;
+            color: firebrick;
+            background: conic-gradient(firebrick 0 0) bottom/100% 0% no-repeat;
+            transition: .3s;
+        }
+
+        a span{
+            position: absolute;
+            top: 50%;
+            left: 175px;
+            translate: -50% -50%;
+            width: 60px;
+            background-size: 200px 200px!important;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: rotate(var(--_r)) translate(var(--_t)) rotate(calc(-1*var(--_r)));
+            --_t: 140px;
+            transition: --_t .3s, width .3s, background .3s,--_r calc(var(--d)*100) linear calc(var(--d)*(-1*var(--i)/var(--n)));
+            /* you can use an animation but let's try something else! */
+            @starting-style {
+                --_r: 100turn;
+            }
+        }
+
+        a:hover {
+            color: #fff;
+            background-size: 100% 100%;
+        }
+
+        a:hover span {
+            --_t: 0px;
+            width: 200px;
+            background-position: 50% 50%!important;
+        }
+
+        ul:has(a:hover) li:not(:has(a:hover)) {
+            opacity: .6;
+        }
+
+        span#chris 	{ --i:0;background: url('https://www.cssday.nl/pix/speakers/chris.jpg')  -60px -60px; }
+        span#ian 	{ --i:1;background: url('https://www.cssday.nl/pix/speakers/ian.jpg') -70px -55px; }
+        span#jane 	{ --i:2;background: url('https://www.cssday.nl/pix/speakers/jane.jpg') -48px -78px; }
+        span#brad 	{ --i:3;background: url('https://www.cssday.nl/pix/speakers/brad.jpg') -70px -68px; }
+        span#ana 	{ --i:4;background: url('https://www.cssday.nl/pix/speakers/ana.jpg') -77px -58px; }
+        span#john 	{ --i:5;background: url('https://www.cssday.nl/pix/speakers/john.jpg') -60px -60px; }
+        span#bramus	{ --i:6;background: url('https://www.cssday.nl/pix/speakers/bramus.jpg') -45px -45px; }
+        span#adam 	{ --i:7;background: url('https://www.cssday.nl/pix/speakers/adam.jpg')  -82px -58px; }
+        span#miriam	{ --i:8;background: url('https://www.cssday.nl/pix/speakers/miriam.jpg') -75px -45px; }
+    </style>
+</head>
+<body>
+    <section>
+        <ul>
+          <li><a href="https://www.cssday.nl/speakers.html#chris">Chris Coyier<span id="chris"></span></a>: Scope</li>
+          <li><a href="https://www.cssday.nl/speakers.html#ian">Ian Frost<span id="ian"></span></a>: Design Token Architecture</li>
+          <li><a href="https://www.cssday.nl/speakers.html#jane">Jane Ori<span id="jane"></span></a>: Hacking the Flow</li>
+          <li><a href="https://www.cssday.nl/speakers.html#brad">Brad Frost<span id="brad"></span></a>: Design Token Architecture</li>
+          <li><a href="https://www.cssday.nl/speakers.html#ana">Ana Rodrigues<span id="ana"></span></a>: Refactoring CSS</li>
+          <li><a href="https://www.cssday.nl/speakers.html#john">John Allsopp<span id="john"></span></a>: Dao of CSS</li>
+          <li><a href="https://www.cssday.nl/speakers.html#bramus">Bramus Van Damme<span id="bramus"></span></a>: MC</li>
+          <li><a href="https://www.cssday.nl/speakers.html#adam">Adam Argyle<span id="adam"></span></a>: The Ultimate Scroller</li>
+          <li><a href="https://www.cssday.nl/speakers.html#miriam">Miriam Suzanne<span id="miriam"></span></a>: Mixins and Functions</li>
+        </ul>
+      </section>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Text</title>
+
+    <style>
+        main{
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #F9FAFB;
+            margin: 0;
+        }
+
+        .main-container{
+            position: relative;
+            /* border-radius: 20px; */
+            z-index: 20;
+            overflow: hidden;
+        }
+
+        .contents{
+            border-radius: 20px;
+            padding: 0px 16px;
+            /* background: linear-gradient(#ffffff, #F3F4F7) padding-box transparent; */
+            border: 20px solid transparent;
+            text-align: center;
+        }
+
+        .background{
+            /* background: #E7E9EE; */
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+        }
+
+        .trail p{
+            position: absolute;
+            offset-path: border-box;
+            offset-anchor: 100% 0%;
+            animation: journey var(--speed, 6s) infinite linear;
+        }
+
+        @keyframes journey{
+            100%{
+                offset-distance: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <div class="background">
+                <div class="trail">
+                    <p>***50% Off***</p>
+                </div>
+            </div>
+            <div class="contents">
+                <h4>Buy Now</h4>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

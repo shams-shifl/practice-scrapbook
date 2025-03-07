@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Ray Animation</title>
+
+    <style>
+        .custom-container {
+            position: relative;
+            z-index: 20;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .custom-content {
+            background: linear-gradient(#ffffff, #e0e0e0) padding-box transparent;
+            padding: 0 1.5rem;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .background {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: #e0e0e0;
+            border-radius: 20px;
+        }
+
+        .trail {
+            width: 100px;
+            aspect-ratio: 2 / 1;
+            position: absolute;
+            background: radial-gradient(
+                100% 100% at right,
+                #8abad3,
+                transparent 50%
+            );
+            offset-path: border-box;
+            offset-anchor: 100% 50%;
+            animation: journey var(--speed, 6s) infinite linear;
+        }
+        
+        @container(width > 600px) {
+            .trail {
+                --speed: 12s;    
+            }
+        }
+
+        @keyframes journey {
+            to {
+                offset-distance: 100%;
+            }
+        }
+
+        main {
+            background-color: #F5F5F5;
+            width: 100vw;
+            height: calc(100vh - 2rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="custom-container">
+            <div class="background">
+              <div class="trail"></div>
+            </div>
+            <div class="custom-content">
+              <p>
+              This is some random text to add content to the demo.
+              </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

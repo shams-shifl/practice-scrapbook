@@ -1,0 +1,164 @@
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            padding-top: 56px;
+        }
+
+        nav{
+            position: fixed;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: darkblue;
+            width: 100vw;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        ul{
+            margin: 0;
+        }
+
+        .main-menu{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-menu li{
+            margin: 0 1rem;
+            cursor: pointer;
+            padding: 16px 16px;
+            display: flex;;
+        }
+
+        .main-menu a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .withOptions{
+            position: relative;
+        }
+
+        .withOptions svg{
+            padding-left: 4px;
+        }
+
+        .dropdown{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            background-color: #fff;
+            padding: 8px 4px;
+            width: 208px;
+            visibility: hidden;
+            opacity: 0;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown li{
+            cursor: pointer;
+            padding: 8px 0;
+        }
+
+        .dropdown li a{
+            color: #000;
+        }
+
+        .withOptions:hover{
+            background-color: rgba(255, 255, 255, .16);
+        }
+
+        .withOptions:hover svg{
+            rotate: 180deg;
+        }
+
+        .withOptions:hover .dropdown{
+            visibility: visible;
+            opacity: 1;
+            box-shadow: 0 2px 6px 1px rgba(0, 0, 0, .12);
+        }
+
+        main{
+            padding: 24px;
+        }
+
+        article{
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        article img, p, ul{
+            padding: 24px 0;
+        }
+
+        article ul li{
+            list-style-position: outside;
+            margin-left: 24px;
+            padding-left: 0;
+            padding-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="main-menu">
+            <li><a href="">Home</a></li>
+            <li class="withOptions">
+                <a href="">
+                    Services
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="#fff"/>
+                    </svg>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="">Design</a></li>
+                    <li><a href="">Development</a></li>
+                    <li><a href="">Social Media Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h1>7 Best Landing Page Design Practices to Boost Conversions</h1>
+            <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*4ZcLOh8ccUSnwNmhTtm_eg.png" alt="" width="640">
+            <p>Landing pages are vital for businesses aiming to convert visitors into customers or leads. As a Lead Digital Designer, I’ve seen how well-designed pages can make a difference. This guide will help you create effective landing pages by focusing on strategy, content, design, forms, and optimization.
+            </p>
+            <h3>Key Points</h3>
+            <ul>
+                <li>Research suggests landing page design best practices can significantly boost conversions, with an average rate of 5.89% across industries.</li>
+                <li>It seems likely that aligning with ad campaigns, using compelling headlines, and ensuring mobile responsiveness are crucial for effectiveness.</li>
+                <li>The evidence leans toward continuous A/B testing and fast loading times (under 3 seconds on mobile) to enhance user experience and conversions.</li>
+            </ul>
+            <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*opCQUGadNXsvGjyE.png" alt="" width="640">
+            <p>A landing page is a standalone web page designed to convert visitors into customers or leads, focusing on a single goal such as signing up for a newsletter, downloading a resource, or making a purchase.</p>
+        </article>
+    </main>
+
+</body>
